@@ -23,11 +23,15 @@ repository = "https://github.com/tessera-engine/shuttle-fork"
 # shuttle-codegen = { path = "codegen", version = "0.20250311.0" }
 # shuttle-common = { path = "common", version = "0.20250311.0" }
 # shuttle-service = { path = "service", version = "0.20250311.0" }
-shuttle-api-client = { path = "api-client", version = "0.52.0", default-features = false }
-shuttle-codegen = { path = "codegen", version = "0.52.0" }
-shuttle-common = { path = "common", version = "0.52.0" }
-shuttle-service = { path = "service", version = "0.52.0" }
+# shuttle-api-client = { path = "api-client", version = "0.52.0", default-features = false }
+# shuttle-codegen = { path = "codegen", version = "0.52.0" }
+# shuttle-common = { path = "common", version = "0.52.0" }
+# shuttle-service = { path = "service", version = "0.52.0" }
 
+shuttle-api-client = { path = "api-client", default-features = false }
+shuttle-codegen = { path = "codegen" }
+shuttle-common = { path = "common" }
+shuttle-service = { path = "service" }
 
 anyhow = "1.0.66"
 assert_cmd = "2.0.6"
@@ -64,11 +68,11 @@ proc-macro-error2 = "2.0.1"
 proc-macro2 = "1.0.89"
 quote = "1.0.21"
 regex = "1.9.5"
-reqwest = { version = "0.12.12", default-features = false, features = [
-  "rustls-tls",
-] }
+# reqwest = { version = "0.12.12", default-features = false, features = ["rustls-tls"] }
 # reqwest-middleware = "0.4.0"
-reqwest-middleware = "0.4.1"
+# reqwest-middleware = "0.4.1"
+reqwest = { git = "https://github.com/tessera-engine/reqwest", default-features = false, features = ["rustls-tls"]}
+reqwest-middleware = { git = "https://github.com/tessera-engine/reqwest-middleware" }
 rexpect = "0.6.0"
 semver = { version = "1.0.17", features = ["serde"] }
 serde = { version = "1.0.148", default-features = false }
